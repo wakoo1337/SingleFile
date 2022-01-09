@@ -35,15 +35,6 @@ void ReadPersonSalary(double* out) {
 	*out = in;
 };
 
-void WritePersonData(const string& name, const unsigned short age, const string& height="", const string& weight="", const string& salary="") {
-	cout << "  == Showing summary ==" << endl;
-	cout << "Name is:   " << name << endl;
-	cout << "Age is:    " << age << endl;
-	if (height != "") cout << "Height is: " << height << endl;
-	if (weight != "") cout << "Weight is: " << weight << endl;
-	if (salary != "") cout << "Salary is: " << salary << endl;
-};
-
 void ReadPersonData(string& name, unsigned short& age, double& salary) {
 	name = ReadPersonName();
 	age = ReadPersonAge();
@@ -60,6 +51,15 @@ void ReadPersonData(string& name, unsigned short& age, unsigned short& height, u
 	unsigned short w;
 	ReadPersonWeight(w);
 	weight = w;
+};
+
+void WritePersonData(const string& name, const unsigned short age, const string& height = "", const string& weight = "", const string& salary = "") {
+	cout << "  == Showing summary ==" << endl;
+	cout << "Name is:   " << name << endl;
+	cout << "Age is:    " << age << endl;
+	if (height != "") cout << "Height is: " << height << endl;
+	if (weight != "") cout << "Weight is: " << weight << endl;
+	if (salary != "") cout << "Salary is: " << salary << endl;
 };
 
 int main(int argc, char** argv) {
